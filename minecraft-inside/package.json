@@ -1,0 +1,15 @@
+﻿{
+  "name": "minecraft-inside",
+  "version": "1.0.0",
+  "description": "Minecraft Inside - Моды, карты, текстуры для Майнкрафт",
+  "scripts": {
+    "dev": "python dev_server.py",
+    "build": "python build.py",
+    "build:prod": "python build.py --production",
+    "db:create": "python db_manager.py --create",
+    "clean": "python build.py --clean"
+  },
+  "keywords": ["minecraft", "mods", "maps", "php", "scss"],
+  "author": "Minecraft Inside Team",
+  "license": "MIT"
+}

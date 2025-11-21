@@ -1,0 +1,167 @@
+﻿.site-header {
+    background: $bg-white;
+    box-shadow: $shadow;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+// Top Header
+.header-top {
+    @include flex-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid $border-light;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.header-left {
+    flex: 0 0 auto;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: $text-dark;
+    display: block;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: $primary;
+    display: block;
+    line-height: 1.2;
+}
+
+.logo-subtitle {
+    font-size: 11px;
+    color: $text-light;
+    display: block;
+    margin-top: 2px;
+}
+
+.header-center {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 30px;
+    
+    @media (max-width: 768px) {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+.header-right {
+    flex: 0 0 auto;
+}
+
+// User Section
+.user-section {
+    @include flex-center;
+    gap: 15px;
+}
+
+.upload-btn {
+    @include button($primary);
+    font-size: 13px;
+}
+
+.user-menu {
+    @include flex-center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    position: relative;
+    
+    &:hover {
+        background: $bg-light;
+        
+        .user-dropdown {
+            display: block;
+        }
+    }
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    background: $primary;
+    border-radius: 50%;
+    @include flex-center;
+    color: white;
+    font-size: 14px;
+}
+
+.username {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: $bg-white;
+    border-radius: 4px;
+    box-shadow: $shadow-hover;
+    min-width: 200px;
+    display: none;
+    z-index: 1001;
+    border: 1px solid $border;
+}
+
+.dropdown-item {
+    @include flex-center;
+    gap: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: $text-dark;
+    border-bottom: 1px solid $border-light;
+    transition: background 0.3s;
+    
+    &:last-child {
+        border-bottom: none;
+    }
+    
+    &:hover {
+        background: $bg-light;
+        color: $primary;
+    }
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: $border-light;
+    margin: 5px 0;
+}
+
+// Auth Section
+.auth-section {
+    @include flex-center;
+    gap: 15px;
+}
+
+.auth-link {
+    color: $text-dark;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    
+    &:hover {
+        color: $primary;
+    }
+}
+
+.auth-btn {
+    @include button($primary);
+}

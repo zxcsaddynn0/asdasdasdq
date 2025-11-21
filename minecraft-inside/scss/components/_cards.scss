@@ -1,0 +1,135 @@
+﻿// Category Cards
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.category-card {
+    @include card;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: $text-dark;
+    
+    &:hover {
+        border-color: $primary;
+    }
+}
+
+.category-icon {
+    width: 50px;
+    height: 50px;
+    background: $primary;
+    border-radius: 50%;
+    @include flex-center;
+    margin: 0 auto 12px;
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s;
+    
+    .category-card:hover & {
+        transform: scale(1.1);
+    }
+}
+
+// File Cards
+.files-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.file-card {
+    @include card;
+    overflow: hidden;
+    
+    &:hover {
+        border-color: $primary;
+    }
+}
+
+.file-image {
+    height: 160px;
+    background: $bg-light;
+    @include flex-center;
+    position: relative;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.file-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: $primary;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.file-content {
+    padding: 15px;
+}
+
+.file-title {
+    margin-bottom: 10px;
+    
+    a {
+        text-decoration: none;
+        color: $text-dark;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.file-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: $text-light;
+    
+    span {
+        @include flex-center;
+        gap: 4px;
+    }
+}
+
+.file-stats {
+    @include flex-between;
+    padding-top: 12px;
+    border-top: 1px solid $border-light;
+    font-size: 12px;
+    color: $text-light;
+}
+
+.file-downloads {
+    @include flex-center;
+    gap: 4px;
+    font-weight: 500;
+}
+
+.file-rating {
+    @include flex-center;
+    gap: 4px;
+    color: $warning;
+}

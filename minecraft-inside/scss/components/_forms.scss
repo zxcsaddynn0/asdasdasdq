@@ -1,0 +1,95 @@
+﻿.search-form {
+    width: 100%;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    background: $bg-light;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid $border;
+    transition: border-color 0.3s;
+    
+    &:focus-within {
+        border-color: $primary;
+    }
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    outline: none;
+    
+    &::placeholder {
+        color: $text-muted;
+    }
+}
+
+.search-btn {
+    @include button($primary);
+    border-radius: 0 25px 25px 0;
+}
+
+// Filter Forms
+.filters-section {
+    background: $bg-white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: $shadow;
+}
+
+.filters-row {
+    display: flex;
+    gap: 15px;
+    align-items: end;
+    flex-wrap: wrap;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-label {
+    font-size: 12px;
+    color: $text-light;
+    font-weight: 500;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid $border;
+    border-radius: 4px;
+    background: $bg-white;
+    font-size: 14px;
+    min-width: 150px;
+    
+    &:focus {
+        border-color: $primary;
+        outline: none;
+    }
+}
+
+.btn-apply {
+    @include button($primary);
+}
+
+.btn-upload-large {
+    @include button($primary);
+    margin-left: auto;
+    
+    @media (max-width: 768px) {
+        margin-left: 0;
+    }
+}

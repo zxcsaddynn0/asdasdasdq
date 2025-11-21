@@ -1,0 +1,63 @@
+﻿// Mobile first responsive design
+
+// Small devices (phones)
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .files-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .section-title {
+        font-size: 20px;
+    }
+}
+
+// Medium devices (tablets)
+@media (max-width: 768px) {
+    .header-top {
+        padding: 15px;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .footer-content {
+        gap: 25px;
+    }
+}
+
+// Large devices (desktops)
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+// Print styles
+@media print {
+    .site-header,
+    .site-footer,
+    .btn-upload,
+    .auth-section {
+        display: none;
+    }
+    
+    .main-content {
+        margin: 0;
+        padding: 0;
+    }
+}
